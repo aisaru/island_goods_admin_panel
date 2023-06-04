@@ -3,6 +3,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:island_goods_web_admin/views/screens/side_bar_screens/widgets/banner_widget.dart';
 
 class UploadBannerScreen extends StatefulWidget {
   static const String routeName = '\UploadBannerScreen';
@@ -129,6 +130,26 @@ class _UploadBannerScreenState extends State<UploadBannerScreen> {
               ),
             ],
           ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Divider(
+              color: Colors.grey,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "Banners",
+                style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+          BannerWidget(),
         ],
       ),
     );
