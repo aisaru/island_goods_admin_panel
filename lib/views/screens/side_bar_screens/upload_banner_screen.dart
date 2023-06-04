@@ -52,6 +52,10 @@ class _UploadBannerScreenState extends State<UploadBannerScreen> {
         'image': imageUrl,
       }).whenComplete(() {
         EasyLoading.dismiss();
+
+        setState(() {
+          _image = null;
+        });
       });
     }
   }
@@ -65,7 +69,7 @@ class _UploadBannerScreenState extends State<UploadBannerScreen> {
             alignment: Alignment.topLeft,
             padding: const EdgeInsets.all(10),
             child: const Text(
-              'Banner',
+              'Upload Banner',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 36,
